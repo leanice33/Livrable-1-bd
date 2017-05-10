@@ -1,0 +1,94 @@
+﻿@model OrDuDragon.Models.Question
+
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>   Test</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>   Question</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Enoncer, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Enoncer, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Enoncer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Reponce1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Reponce1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Reponce1, "", new { @class = "text-danger" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Reponse1Bonne)
+                    @Html.ValidationMessageFor(model => model.Reponse1Bonne, "", new { @class = "text-danger" })
+                </div>
+            </div>  
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Reponce2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Reponce2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Reponce2, "", new { @class = "text-danger" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Reponse2Bonne)
+                    @Html.ValidationMessageFor(model => model.Reponse2Bonne, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Reponce3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Reponce3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Reponce3, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Reponse3Bonne)
+                @Html.ValidationMessageFor(model => model.Reponse3Bonne, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Reponce4, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Reponce4, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Reponce4, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Reponse4Bonne)
+                @Html.ValidationMessageFor(model => model.Reponse4Bonne, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+      
+      
+
+       
+
+      
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dificulter, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Dificulter, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Dificulter, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-9 col-md-6">
+                <input type="submit" id="submit" value="Ajouter la question" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Annulé", "Index")
+</div>

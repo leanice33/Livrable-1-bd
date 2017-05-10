@@ -1,0 +1,101 @@
+﻿@model OrDuDragon.Models.Question
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Enoncer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enoncer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponce1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponce1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponse1Bonne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponse1Bonne)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponce2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponce2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponse2Bonne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponse2Bonne)
+        </dd>
+
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponce3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponce3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponse3Bonne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponse3Bonne)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponce4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponce4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reponse4Bonne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reponse4Bonne)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dificulter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dificulter)
+        </dd>
+
+    </dl>
+</div>
+<p>
+  @*  @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>
